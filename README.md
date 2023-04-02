@@ -24,7 +24,6 @@ Download video:
 python rtv.py https://365.rtvslo.si/arhiv/odmevi/174947419
 ```
 Download audio only:
-https://365.rtvslo.si/arhiv/odmevi/174947419
 ```
 python rtv.py https://365.rtvslo.si/arhiv/odmevi/174947419 -audio
 ```
