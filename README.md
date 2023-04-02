@@ -19,7 +19,7 @@ This is a Python script that downloads individual audio/video files from the web
 
 
 ## Example usage
-Download video:
+Download audio or video:
 ```
 python rtv.py https://365.rtvslo.si/arhiv/odmevi/174947419
 ```
