@@ -34,11 +34,13 @@ title_element = driver.find_elements(By.XPATH, "//a[@class='show-title-link']")[
 title = title_element.text
 title = re.sub(r'[^a-zA-Z0-9čžšČŽŠćĆ\s]+', '', title)
 
-subtitle_element = driver.find_elements(By.XPATH, "//div[@class='rtv4d-title-meta']/h2")[0]
-subtitle = subtitle_element.text
-subtitle = re.sub(r'[^a-zA-Z0-9čžšČŽŠćĆ\s]+', '', subtitle)
-
-filename = title + ' - ' + subtitle
+try:
+  subtitle_element = driver.find_elements(By.XPATH, "//div[@class='rtv4d-title-meta']/h1")[0]
+  subtitle = subtitle_element.text
+  subtitle = re.sub(r'[^a-zA-Z0-9čžšČŽŠćĆ\s]+', '', subtitle)
+  filename = title + ' - ' + subtitle
+except:
+  filename = title
 print(filename)
 
 # Click on the video to generate requests
